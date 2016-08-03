@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 var Youtube = require('../src/index');
 //
 var YT = new Youtube;
-//YT.use('AIzaSyBxaRL2YkR-3zhHmYfUMGkMtUuUBcmrrpU')
+YT.use('AIzaSyBxaRL2YkR-3zhHmYfUMGkMtUuUBcmrrpU')
 
 
 // var params = {
