@@ -7,6 +7,10 @@
     "start": "node test/index.test.js",
     "test": "mocha test/index.test.js -w"
   },
+  "repository": {
+    "type": "git",
+    "url" : "git+https://github.com/idbouche/SDK-youtobe"
+  },
   "keywords": [
     "sdk",
     "youtube api",
