@@ -1,0 +1,25 @@
+{
+  "name": "sdkyoutube",
+  "version": "1.0.0",
+  "description": "Sdk Youtube",
+  "main": " src/index.js",
+  "scripts": {
+    "start": "node test/index.test.js",
+    "test": "mocha test/index.test.js -w"
+  },
+  "keywords": [
+    "sdk",
+    "youtube",
+    "api"
+  ],
+  "author": "Mohammed Id Bouche <idbouche2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "2.74.0",
+    "xhr": "2.2.2"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.0"
+  }
+}
