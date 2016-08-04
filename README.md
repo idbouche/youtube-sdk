@@ -52,25 +52,39 @@ YT.use('YOUR API KEY')
 Required config options:
 * YOUR API KEY — Key api code (check your application settings on https://console.developers.google.com)
 * resource - Look here https://developers.google.com/apis-explorer/#p/youtube/v3/
-* parts -  Object look here https://developers.google.com/apis-explorer/#p/youtube/v3/
+* params -  Object look here https://developers.google.com/apis-explorer/#p/youtube/v3/
 * callback - Function callback return errors (errors youtube api) data in JSON
 
 
 # API requests
-For youtube API requests you have to use method *get(_resource, _parts, _callback)*.
+For youtube API requests you have to use method *get(_resource, _params, _callback)*.
 
-* **[string] _resource** — name of youtube API resource,
-* **[mixed] _parts** - object with values of parts for api method. This param is required.
-* **[mixed] _callback** — required, function callback.
+* **[string] _resource** - name of youtube API resource,    
+- **'activities'**
+- **'channels'**
+- **'channelBanners'**
+- **'guideCategories'**
+- **'playlistItems'**
+- **'playlists'**
+- **'search'**
+- **'subscriptions'**
+- **'thumbnails'**
+- **'videoCategories'**
+- **'videos'**
+* **[mixed] _params** - object with values of parts for api method. This param is required.
+- **'snippet'**
+- **'contentDetails'**
+- **'status'**
+- **'statistics'**
+- **'player'**
+- **'topicDetails'**
+- **'recordingDetails'**
+- **'fileDetails'**
+- **'processingDetails'**
+- **'suggestions'**
+- **' ... '
+* **[mixed] _callback** - required, function callback.
 
-
-## Callback
-```js
-
-YT.get('search', {'part' : 'snippet'}, function(err,data) {
-console.log(data);
-});
-```
 
 # For developers
 Your commits and pull requests are welcome. Please run the tests before
