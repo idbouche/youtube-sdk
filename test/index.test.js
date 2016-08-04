@@ -3,12 +3,12 @@ var expect = require('chai').expect;
 var Youtube = require('../src/index');
 //
 var YT = new Youtube;
-YT.use('Your key API')
+YT.use('Your API key')
 
 
 var params = {
           part       : 'snippet',
-          location   : '48.858319942162794%2C2.2944259643554683',
+          location   : '48.858319942162794,2.2944259643554683',
           locationRadius: '4000m',
           maxResults    : '50',
           publishedBefore: new Date(1469739935*1000).toISOString(), //Date Google

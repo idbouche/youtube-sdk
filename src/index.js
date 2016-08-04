@@ -1,5 +1,6 @@
 
 var request = require('request');
+var querystring = require('querystring');
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 /**
@@ -37,11 +38,10 @@ var Youtube = function() {
 
   this.get = function (resource, params, callback) {
     if (isEmpty(params)===false && callback){
+      var param = querystring.stringify(params, null, null)
       var url = 'https://www.googleapis.com/youtube/v3/'+ resource +'?'
-      for (var parm in params){
-        url +=  parm + '=' + params[parm]+ '&';
-      }
-      url += 'order=date&type=video%2Clist&key='+this.key
+      url += param
+      url += '&order=date&type=video%2Clist&key='+this.key
       request({
         url:url,
         method: 'GET'
