@@ -13,8 +13,12 @@
   },
   "keywords": [
     "sdk",
-    "youtube api",
-    "api"
+    "youtube-api",
+    "API",
+    "v3",
+    "Node",
+    "nodejs",
+    "youtube"
   ],
   "author": "Mohammed Id Bouche <idbouche2@gmail.com>",
   "license": "MIT",

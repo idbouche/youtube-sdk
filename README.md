@@ -16,22 +16,22 @@ YT.use('Your key API')
 
 
 var params = {
-          part       : 'snippet',
-          location   : '48.858319942162794%2C2.2944259643554683',
-          locationRadius: '4000m',
-          maxResults    : '50',
-          publishedBefore: '2016-08-03T00:00:00Z', //Date Google
-          publishedAfter: '2016-08-02T00:00:00Z'
-      };
+  part       : 'snippet',
+  location   : '48.858319942162794,2.2944259643554683',
+  locationRadius: '4000m',
+  maxResults    : '50',
+  publishedBefore: '2016-08-03T00:00:00Z', //Date Google
+  publishedAfter: '2016-08-02T00:00:00Z'
+};
 
 // Request server API method
 
 YT.get('search', params, function (err, data) {
-    if (err){
-        console.log(err);
-    }else{
-        console.log(data);
-    }
+  if (err){
+    console.log(err);
+  }else{
+    console.log(data);
+  }
 
 });
 
@@ -60,29 +60,29 @@ Required config options:
 For youtube API requests you have to use method *get(_resource, _params, _callback)*.
 
 * **[string] _resource** - name of youtube API resource,    
-- **'activities'**
-- **'channels'**
-- **'channelBanners'**
-- **'guideCategories'**
-- **'playlistItems'**
-- **'playlists'**
-- **'search'**
-- **'subscriptions'**
-- **'thumbnails'**
-- **'videoCategories'**
-- **'videos'**
+  - **'activities'**
+  - **'channels'**
+  - **'channelBanners'**
+  - **'guideCategories'**
+  - **'playlistItems'**
+  - **'playlists'**
+  - **'search'**
+  - **'subscriptions'**
+  - **'thumbnails'**
+  - **'videoCategories'**
+  - **'videos'**
 * **[mixed] _params** - object with values of parts for api method. This param is required.
-- **'snippet'**
-- **'contentDetails'**
-- **'status'**
-- **'statistics'**
-- **'player'**
-- **'topicDetails'**
-- **'recordingDetails'**
-- **'fileDetails'**
-- **'processingDetails'**
-- **'suggestions'**
-- **' ... '
+  - **'snippet'**
+  - **'contentDetails'**
+  - **'status'**
+  - **'statistics'**
+  - **'player'**
+  - **'topicDetails'**
+  - **'recordingDetails'**
+  - **'fileDetails'**
+  - **'processingDetails'**
+  - **'suggestions'**
+  - **' ... '
 * **[mixed] _callback** - required, function callback.
 
 
@@ -98,5 +98,6 @@ You have to provide tests for the new features.
 
 
 # Thanks to
+* [Nunki.co](http://nunki.co)
 * [MarquesDev](https://github.com/MarquesDev)
 * [Sami-Radi](https://github.com/Sami-Radi)
