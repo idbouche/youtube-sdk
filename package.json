@@ -1,15 +1,16 @@
 {
   "name": "youtube-sdk",
-  "version": "0.0.3",
   "description": "Youtube Data API Driver for NodeJS",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha test/index.test.js",
-    "test:debug": "DEBUG=app:* mocha test/index.test.js"
+    "test:debug": "DEBUG=app:* mocha test/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idbouche/youtube-sdk.git"
+    "url": "https://github.com/idbouche/youtube-sdk.git"
   },
   "keywords": [
     "sdk",
@@ -28,9 +29,15 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "commitizen": "2.8.5",
+    "cz-conventional-changelog": "1.1.7",
     "debug": "2.2.0",
     "eslint": "3.2.2",
     "eslint-config-google": "0.6.0",
-    "mocha": "3.0.0"
+    "mocha": "3.0.0",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig":{
+    "path":"node_modules/cz-conventional-changelog"
   }
 }
