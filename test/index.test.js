@@ -1,8 +1,9 @@
-var expect = require('chai').expect,
-    YT     = new (require('../src/index.js'))();
+var expect = require('chai').expect;
+var YT = new (require('../src/index.js'))();
+var key = require('./../_config/key.json')
 
 
-YT.use('Your API key');
+YT.use(key.key);
 
 var params = {
   part           : 'snippet',

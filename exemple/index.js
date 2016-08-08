@@ -1,8 +1,9 @@
 var Youtube = require('../src/index');
 var querystring = require('querystring');
+var key = require('./../_config/key.json')
 
 var YT = new Youtube;
-YT.use('Your API key');
+YT.use(key.key);
 
 
 var params = {
