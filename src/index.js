@@ -18,7 +18,6 @@ function isEmpty(obj) {
   return true;
 }
 
-<<<<<<< HEAD
 var Youtube = function () {
   var ENDPOINT = 'https://www.googleapis.com/youtube/v3/';
   var KEY = null;
