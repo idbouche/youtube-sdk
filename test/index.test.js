@@ -2,7 +2,7 @@ var expect = require('chai').expect,
     YT     = new (require('../src/index.js'))();
 
 
-YT.use('AIzaSyBxaRL2YkR-3zhHmYfUMGkMtUuUBcmrrpU');
+YT.use('Your API key');
 
 var params = {
   part           : 'snippet',
