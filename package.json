@@ -4,12 +4,12 @@
   "description": "Youtube Data API Driver for NodeJS",
   "main": "src/index.js",
   "scripts": {
-    "start": "node test/index.test.js",
-    "test": "mocha test/index.test.js -w"
+    "test": "mocha test/index.test.js",
+    "test:debug": "DEBUG=app:* mocha test/index.test.js"
   },
   "repository": {
     "type": "git",
-    "url" : "git+https://github.com/idbouche/youtube-sdk.git"
+    "url": "git+https://github.com/idbouche/youtube-sdk.git"
   },
   "keywords": [
     "sdk",
@@ -19,10 +19,12 @@
   "author": "Mohammed Id Bouche <idbouche2@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "qs": "6.2.1",
     "request": "2.74.0"
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "debug": "2.2.0",
     "mocha": "3.0.0"
   }
 }
