@@ -1,6 +1,6 @@
 {
   "name": "youtube-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Youtube Data API Driver for NodeJS",
   "main": "src/index.js",
   "scripts": {

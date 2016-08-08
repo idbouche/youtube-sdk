@@ -2,7 +2,7 @@ var Youtube = require('../src/index');
 var querystring = require('querystring');
 
 var YT = new Youtube;
-YT.use('AIzaSyBxaRL2YkR-3zhHmYfUMGkMtUuUBcmrrpU');
+YT.use('Your API key');
 
 
 var params = {
