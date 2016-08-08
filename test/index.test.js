@@ -1,8 +1,8 @@
 var expect = require('chai').expect,
-    YT     = new (require('../src/index.js'))(),
-    KEY    = require('./../config/key.json').key;
+    YT     = new (require('../src/index.js'))();
 
-YT.use(KEY);
+
+YT.use('AIzaSyBxaRL2YkR-3zhHmYfUMGkMtUuUBcmrrpU');
 
 var params = {
   part           : 'snippet',
@@ -26,6 +26,7 @@ describe('SEARCH', function () {
 
   it('Should return an error', function (done) {
     YT.get('search', {}, function (err, response, headers) {
+      console.log(err);
       expect(err).to.be.an('error');
       done()
     });
