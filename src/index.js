@@ -3,6 +3,11 @@ var request        = require('request'),
     debug          = require('debug')('app:sdk'),
     hasOwnProperty = Object.prototype.hasOwnProperty;
 
+/**
+ * To check if an object is empty
+ * @param obj
+ * @returns {boolean}
+ */
 function isEmpty(obj) {
   if ( obj == null ) return true;
   if ( obj.length > 0 ) return false;
@@ -17,6 +22,14 @@ var Youtube = function () {
   var ENDPOINT = 'https://www.googleapis.com/youtube/v3/';
   var KEY = null;
 
+  /**
+   * The main function for making requests
+   * @param method {String} GET|POST|DELETE|PUT
+   * @param url {String} API method
+   * @param params {Object} The call's params
+   * @param callback
+   * @private
+   */
   var _request = function (method, url, params, callback) {
     if ( isEmpty(params) ) return callback(new Error('Params empty'));
     if ( !callback ) return callback(new Error('No callback'));
@@ -25,13 +38,14 @@ var Youtube = function () {
 
     debug('URL= %s', url);
 
-    request({ url   : url, method: method.toUpperCase() }, function (err, headers, body) {
-      if ( err ) return callback(err, null, null);
-      var body = JSON.parse(body);
-      if(body.error) return callback(body, null, null);
+    request({ url: url, method: method.toUpperCase() },
+      function (err, headers, body) {
+        if ( err ) return callback(err, null, null);
+        var body = JSON.parse(body);
+        if ( body.error ) return callback(body, null, null);
 
-      return callback(err, body, headers);
-    });
+        return callback(err, body, headers);
+      });
   }
 
   this.use = function (key) {
