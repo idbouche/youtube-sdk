@@ -86,7 +86,7 @@ For youtube API requests you have to use method *get(_resource, _params, _callba
   - **'fileDetails'**
   - **'processingDetails'**
   - **'suggestions'**
-  - **' ... '
+  - **'...'**
 * **[mixed] _callback** - required, function callback.
 
 
