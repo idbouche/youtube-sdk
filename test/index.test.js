@@ -1,42 +1,33 @@
+var expect = require('chai').expect,
+    YT     = new (require('../src/index.js'))(),
+    KEY    = require('./../config/key.json').key;
 
-var expect = require('chai').expect;
-var Youtube = require('../src/index');
-//
-var YT = new Youtube;
-YT.use('Your API key')
-
+YT.use(KEY);
 
 var params = {
-  part       : 'snippet',
-  location   : '48.858319942162794,2.2944259643554683',
-  locationRadius: '4000m',
-  maxResults    : '50',
-  publishedBefore: new Date(1469739935*1000).toISOString(), //Date Google
-  publishedAfter: new Date(1467147935*1000).toISOString()
+  part           : 'snippet',
+  location       : '48.858,2.294',
+  locationRadius : '1000m',
+  maxResults     : '50',
+  order          : 'date',
+  type           : 'video',
+  publishedBefore: new Date(1469739935 * 1000).toISOString(), //Date Google
+  publishedAfter : new Date(1467147935 * 1000).toISOString()
 };
 
-
-
-YT.get('search', params, function (err, body) {
-  if (err){
-    console.log(err);
-  }else {
-    console.log(body)
-  }
-
-
-});
-
-
-describe('SDK-YOUTUBE', function () {
-  it('object',function () {
-    YT.get('videos', params, function (err, body) {
-      expect(body).to.be.an('object');
+describe('SEARCH', function () {
+  it('Should return an array of contents', function (done) {
+    YT.get('search', params, function (err, response, headers) {
+      if ( err ) return done(err);
+      expect(response.items).to.have.length.above(1);
+      done();
     });
-  })
-  it('length',function () {
-    YT.get('videos', params, function (err, body) {
-      expect(body).to.not.be.empty;
+  });
+
+  it('Should return an error', function (done) {
+    YT.get('search', {}, function (err, response, headers) {
+      expect(err).to.be.an('error');
+      done()
     });
-  })
+  });
 });
