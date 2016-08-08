@@ -1,9 +1,13 @@
 node youtube-sdk
 ================
 Small SDK for youtube API.
+
+![Build](https://travis-ci.org/idbouche/youtube-sdk.svg?branch=master)
 [![Version](https://img.shields.io/npm/v/youtube-sdk.svg)](https://www.npmjs.com/package/youtube-sdk)
 [![Downloads](https://img.shields.io/npm/dt/youtube-sdk.svg)](https://www.npmjs.com/package/youtube-sdk)
-[![license](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/youtube-sdk)
+[![License](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/youtube-sdk)
+
+
 
 # Installation
     npm install youtube-sdk
