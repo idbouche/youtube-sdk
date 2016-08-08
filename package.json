@@ -1,6 +1,6 @@
 {
   "name": "youtube-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Youtube Data API Driver for NodeJS",
   "main": "src/index.js",
   "scripts": {
@@ -13,8 +13,12 @@
   },
   "keywords": [
     "sdk",
-    "youtube api",
-    "api"
+    "youtube-api",
+    "API",
+    "v3",
+    "Node",
+    "nodejs",
+    "youtube"
   ],
   "author": "Mohammed Id Bouche <idbouche2@gmail.com>",
   "license": "MIT",
