@@ -8,7 +8,6 @@ Small SDK for youtube API.
 [![License](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/youtube-sdk)
 
 
-
 # Installation
     npm install youtube-sdk
 
@@ -43,9 +42,6 @@ YT.get('search', params, function (err, data) {
   }
 
 });
-
-
-
 ```
 
 # Setup
@@ -55,7 +51,6 @@ var youtube = require('youtube-sdk');
 var YT = new youtube();
 
 YT.use('YOUR API KEY')
-
 ```
 
 Required config options:

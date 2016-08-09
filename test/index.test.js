@@ -1,6 +1,5 @@
 var expect = require('chai').expect;
 var YT = new (require('../src/index.js'))();
-//require('env2')('config.env');
 var KEY = process.env.KEY;
 
 YT.use(KEY);
