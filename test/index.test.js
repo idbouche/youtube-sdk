@@ -1,9 +1,10 @@
 var expect = require('chai').expect;
 var YT = new (require('../src/index.js'))();
 var key = require('./../_config/key.json')
+require('env2')('./../_config/key.json');
+var KEY = process.env.KEY;
 
-
-YT.use(key.key);
+YT.use(KEY);
 
 var params = {
   part           : 'snippet',

@@ -1,9 +1,13 @@
 var Youtube = require('../src/index');
 var querystring = require('querystring');
-var key = require('./../_config/key.json')
+//var key = require('./../_config/key.json')
+require('env2')('config.env');
+
+
+var KEY = process.env.KEY;
 
 var YT = new Youtube;
-YT.use(key.key);
+YT.use(KEY);
 
 
 var params = {

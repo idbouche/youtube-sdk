@@ -24,6 +24,7 @@
   "author": "Mohammed Id Bouche <idbouche2@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "env2": "2.1.1",
     "qs": "6.2.1",
     "request": "2.74.0"
   },
@@ -37,7 +38,7 @@
     "mocha": "3.0.0",
     "semantic-release": "^4.3.5"
   },
-  "czConfig":{
-    "path":"node_modules/cz-conventional-changelog"
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
