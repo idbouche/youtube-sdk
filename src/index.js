@@ -1,7 +1,10 @@
 var request = require('request');
 var qs = require('qs');
-var debug = require('debug')('app:sdk');
-
+try {
+  var debug = require('debug')('app:sdk');
+} catch(err) {
+  debug = function() { };
+}
 var Youtube = function() {
   var ENDPOINT = 'https://www.googleapis.com/youtube/v3/';
   var KEY = null;
